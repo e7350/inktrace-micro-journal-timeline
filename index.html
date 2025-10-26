@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>InkTrace - Micro Journal Timeline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <style type="text/tailwindcss" data-teda="tailwind-apply">
+      @layer components {
+        .btn-primary { @apply bg-indigo-700 text-white px-5 py-3 rounded-lg shadow-lg hover:bg-indigo-800 focus:outline-none focus:ring-4 focus:ring-indigo-200; }
+        .btn-ghost { @apply bg-white border border-gray-200 px-4 py-2 rounded-md text-sm text-gray-800 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-100; }
+        .eyebrow { @apply text-sm text-gray-500 tracking-wider; }
+        .headline { @apply font-serif font-bold text-black; }
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800 antialiased leading-relaxed">
+    <header class="max-w-7xl mx-auto px-6 py-10">
+      <nav class="flex items-center justify-between" aria-label="Main navigation">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-md bg-indigo-700 flex items-center justify-center text-white font-bold">IT</div>
+          <div>
+            <div class="eyebrow">InkTrace</div>
+            <div class="text-xs text-gray-400">Micro journal timeline</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <a class="btn-ghost" href="#features">Features</a>
+          <a class="btn-ghost" href="app.html">Open App</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero: magazine editorial layout, dramatic typography and pull quote -->
+    <main class="max-w-7xl mx-auto px-6 pb-20">
+      <section class="relative overflow-visible mb-16">
+        <div class="grid grid-cols-12 gap-6 items-start">
+          <!-- large dramatic column (70%) -->
+          <div class="col-span-12 lg:col-span-8 relative">
+            <div class="pt-8 pb-12 pr-6">
+              <p class="eyebrow mb-3">A tiny practice. Big clarity.</p>
+              <h1 class="headline text-6xl md:text-7xl leading-tight tracking-tight" style="line-height:0.92;">
+                Capture the day in a sentence.<br>
+                Build your timeline in moments.
+              </h1>
+              <blockquote class="mt-8 border-l-4 border-indigo-100 pl-5 italic text-lg text-gray-600 max-w-prose">
+                "Short notes become a living archive. The small things add up." - an invitation to record.
+              </blockquote>
+
+              <div class="mt-8 flex gap-4 items-center">
+                <a class="btn-primary inline-flex items-center" href="app.html" aria-label="Open InkTrace app">Open the App</a>
+                <a class="btn-ghost" href="#how">How it works</a>
+              </div>
+            </div>
+
+            <!-- affixed pull quote card positioned unexpectedly -->
+            <div class="hidden md:block absolute right-0 top-0 transform translate-x-8 -translate-y-6 rotate-3 w-56 bg-white p-4 shadow-lg z-20" aria-hidden="true">
+              <div class="text-sm text-indigo-700 font-semibold">Pull thought</div>
+              <div class="mt-2 text-gray-700 text-sm">Write a line. Tag it. Find it in seconds.</div>
+            </div>
+          </div>
+
+          <!-- narrow visual column (30%) with an editorial image and excerpt positioned irregularly -->
+          <aside class="col-span-12 lg:col-span-4 mt-10 lg:mt-0">
+            <div class="bg-gray-50 rounded-lg p-6 shadow-inner sticky top-24">
+              <div class="text-sm text-gray-500">Editor note</div>
+              <h3 class="mt-2 font-serif text-2xl text-gray-900">The tiny ritual</h3>
+              <p class="mt-3 text-gray-600 text-sm">A daily micro journal is a compass. InkTrace helps keep it delightful and fast, with smart tags and instant search.</p>
+              <div class="mt-4">
+                <a class="btn-ghost" href="app.html">Start journaling</a>
+              </div>
+            </div>
+
+            <!-- small rotated card to break layout balance -->
+            <div class="hidden lg:block mt-6 transform -rotate-2 bg-white p-4 shadow-md border border-gray-100 text-sm">
+              <strong class="text-indigo-700">Quick tip</strong>
+              <p class="mt-2 text-gray-600">Use one or two tags per note. Tags make moments discoverable.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="features" class="my-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <article class="p-6 rounded-lg shadow-sm border border-transparent bg-indigo-50">
+          <h4 class="font-semibold text-lg text-indigo-900">Fast capture</h4>
+          <p class="mt-2 text-gray-700">Compose quick entries in seconds. Keyboard friendly and mobile ready.</p>
+        </article>
+        <article class="p-6 rounded-lg shadow-sm border border-transparent bg-teal-50">
+          <h4 class="font-semibold text-lg text-teal-900">Tags and search</h4>
+          <p class="mt-2 text-gray-700">Find entries by tag or full text instantly. Tag cloud shows activity.</p>
+        </article>
+        <article class="p-6 rounded-lg shadow-sm border border-transparent bg-rose-50">
+          <h4 class="font-semibold text-lg text-rose-900">Private by default</h4>
+          <p class="mt-2 text-gray-700">All data is stored locally in your browser. You control your timeline.</p>
+        </article>
+      </section>
+
+      <section id="how" class="mb-20">
+        <div class="max-w-3xl px-6 lg:px-12 rounded-lg p-6">
+          <h3 class="font-semibold text-xl text-amber-900">How it works</h3>
+          <p class="mt-3 text-gray-700">Click open app, add a short entry, tag it, and search anytime. The interface is built for small rituals and large clarity.</p>
+        </div>
+        </div>
+      </section>
+
+      <footer class="pt-12 pb-20 text-center text-sm text-gray-500">
+        Built with care by <a href="https://teda.dev" class="text-indigo-700">Teda.dev</a>. InkTrace keeps your moments close.
+      </footer>
+    </main>
+    <script src="scripts/helpers.js"></script>
+  <script src="scripts/ui.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
